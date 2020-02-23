@@ -1,8 +1,8 @@
 ---
 layout: page
-title: About
-permalink: /about/
-weight: 3
+title: Resume
+permalink: /resume/
+weight: 2
 ---
 
 # **About Me**
