@@ -22,6 +22,10 @@ nav_exclude:                                            # The following paths ar
   - pages/projects
   - _includes/blog/index.html
   - _includes/projects/index.html
+  - /blog
+  - /projects
+  - blog
+  - projects
 
 
 ### Author Info ###
