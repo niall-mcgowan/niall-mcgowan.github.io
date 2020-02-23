@@ -9,11 +9,17 @@ weight: 1
 
 Hi I am **{{ site.author.name }}** :wave:,<br>
 
-I'm an **Information Security Professional** and **BSI ISO27001 Lead Auditor**. With an eclectic range of previous experience I have recently focused on holistic evaluations of security baselines in IaaS, PaaS and SaaS cloud environments to define and adapt policy and automate checks and remediation. 
+{% include elements/button.html link="https://linked.com/nialltmcgowan" text="View my LinkedIn" style="primary" size="sm" %}
 
-Specialising in security architecture through governance, risk and compliance (GRC), systems/network benchmarking and hardening, vulnerability assessments, and user awareness. Organisations previously worked with include MoneySupermarket, Martin Baker, The Government of Malta, The NHS and various UK Government bodies such as HMRC, and BEIS.
+I'm an **Information Security Professional** and **BSI ISO27001 Lead Auditor**.
 
-# **Areas of Expertise**
+With an eclectic range of previous experience I have recently focused on holistic evaluations of security baselines in IaaS, PaaS and SaaS cloud environments to define and adapt policy and automate checks and remediation. 
+
+Specialising in security architecture through governance, risk and compliance (GRC), systems/network benchmarking and hardening, vulnerability assessments, and user awareness. 
+
+Organisations I have previously worked with include MoneySupermarket, Martin Baker, The Government of Malta, The NHS and various UK Government bodies such as HMRC, and BEIS.
+
+# **What I Specialise In**
 
 | Cloud Computing Security                           	| Information Security Architecture                 	|
 | IT Governance and Enterprise Risk Management       	| Incident Response and Automation                  	|
