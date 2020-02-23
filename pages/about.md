@@ -8,4 +8,15 @@ weight: 1
 # **About Me**
 
 Hi I am **{{ site.author.name }}** :wave:,<br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+I'm an **Information Security Professional** and **BSI ISO27001 Lead Auditor**. With an eclectic range of previous experience I have recently focused on holistic evaluations of security baselines in IaaS, PaaS and SaaS cloud environments to define and adapt policy and automate checks and remediation. 
+
+Specialising in security architecture through governance, risk and compliance (GRC), systems/network benchmarking and hardening, vulnerability assessments, and user awareness. Organisations previously worked with include MoneySupermarket, Martin Baker, The Government of Malta, The NHS and various UK Government bodies such as HMRC, and BEIS.
+
+# **Areas of Expertise**
+
+| Cloud Computing Security                           	| Information Security Architecture                 	|
+| IT Governance and Enterprise Risk Management       	| Incident Response and Automation                  	|
+| Data Protection and GDPR                           	| Penetration Testing and Vulnerability Assessments 	|
+| Network Security and Management                    	| Identity and Access Management                    	|
+| Business Continuity and Disaster Recovery Planning 	| Social Engineering and User Awareness             	|
