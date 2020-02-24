@@ -20,14 +20,6 @@ nav_exclude:                                            # The following paths ar
   - pages/404.html
   - pages/index.md
   - documentation/partials/**                           # For Documentation Only
-  - pages/blog
-  - pages/projects
-  - _includes/blog/index.html
-  - _includes/projects/index.html
-  - /blog
-  - /projects
-  - blog
-  -
 
 
 ### Author Info ###
