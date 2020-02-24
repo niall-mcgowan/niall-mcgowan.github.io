@@ -11,7 +11,11 @@ Hi I am **{{ site.author.name }}** :wave:,<br>
 
 {% include elements/button.html link="https://linkedin.com/nialltmcgowan" text="View my LinkedIn" style="primary" size="sm" %}
 
-I'm an **Information Security Professional** and **BSI ISO27001 Lead Auditor**.
+I'm an **Information Security Professional** and **BSI ISO27001 Lead Auditor**. I am passionate about security.
+
+![Showing skills](https://website-assetsnm.s3.eu-west-2.amazonaws.com/screenshot.gif "Experience")
+
+
 
 With an eclectic range of previous experience I have recently focused on holistic evaluations of security baselines in IaaS, PaaS and SaaS cloud environments to define and adapt policy and automate checks and remediation. 
 
