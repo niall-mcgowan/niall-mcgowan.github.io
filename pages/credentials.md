@@ -7,7 +7,7 @@ weight: 3
 
 # **Credentials**
 
-Review my credentials below :point_down:
+Review my certifications and qualifications below :point_down:
 
 ## **Certifications**
 
