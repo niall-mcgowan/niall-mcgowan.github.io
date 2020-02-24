@@ -1,13 +1,42 @@
-- title: Project Manager
-  from: Jun 2017
-  to: Oct 2017
-  description: |+
-    KPMG, UK
-    • Point number 1
-    • Example point 2
-    • This is point number 3
+- title: Security Engineer
+  from: <b>Well Pharmacy</b>, Aug 2019
+  to: Present
+  description: • Working with DevOps team to implement security automation and remediation throughout AWS. <br />
+               • Ensuring compliance with NHS’s Data Security and Protection Toolkit, CareCERT, CyberEssentials and PCI-DSS. <br />
+               • Project lead implementing Microsoft Cloud Application Security (MCAS) solution for MS and AWS. <br />
+               • Implementing Microsoft DLP and security solutions across the estate utilising new E5 licenses. <br />
+               • Project lead creating an Information Security Management Suite being implemented across the company. <br />
+               • Running security awareness workshops for employees across the company, from c-suite to casual staff. <br />
 
-- title: Software Engineer, Google, UK
+- title: Security Consultant
+  from: <b>The AntiSocial Engineer Ltd</b>, Mar 2019
+  to: Jun 2019
+  description: • Working with several large charities and organisations to improve their security and data protection through vulnerability assessments and ISO 27001/GDPR audits. <br />
+               • Evaluation of areas such as network security, data loss prevention, disaster recovery, business continuity, identity and access management, encryption, database security and endpoint security. <br />
+               • Reporting security performance against established security metrics of the organisation. <br />
+               • Creation of a custom e-learning course using an online learning portal. <br />
+               • Creating policies and procedures from audits conducted ensuring they coincide with the organisations business requirements. <br />
+
+- title: Information Security Consultant
+  from: <b>Samurai Digital Security Limited</b>, Apr 2018
+  to: Jan 2019
+  description: • Working with several large charities and organisations to improve their security and data protection through vulnerability assessments and ISO 27001/GDPR audits. <br />
+               • Evaluation of areas such as network security, data loss prevention, disaster recovery, business continuity, identity and access management, encryption, database security and endpoint security. <br />
+               • Reporting security performance against established security metrics of the organisation. <br />
+               • Creation of a custom e-learning course using an online learning portal. <br />
+               • Creating policies and procedures from audits conducted ensuring they coincide with the organisations business requirements. <br />
+
+- title: Information Security Architect
+  from: <b>South West Yorkshire Partnership NHS Foundation Trust</b>, Aug 2018
+  to: Dec 2018
+  description: • Working directly with the Head of Information Security for the South Yorkshire NHS. <br />
+               • Evaluating the NHS’s anti-phishing capabilities through mail server development and email forensics. <br />
+               • Development of a holistic phishing awareness campaign. <br />
+               • Creation of a custom e-learning course using an online learning portal. <br />
+               • Simulated phishing campaign to establish and gauge user readiness baseline. <br />
+               • Deployment, hardening and maintenance of mail and phishing servers to facilities the simulation exercise. <br />
+
+- title: Phishing Simulation Project Manager
   from: <b>Bob's Business</b>, Jun 2017
   to: Oct 2017
   description: • Head of the technical department working with junior staff members. <br />
