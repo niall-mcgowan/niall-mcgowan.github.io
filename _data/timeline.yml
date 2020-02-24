@@ -13,6 +13,6 @@
 - title: IT Administrator
   from: Dec 2012
   to: Aug 2016
-  description: {% include skills/heaton_green.html %}
+  description: "{% include skills/heaton_green.html %}"
 
 
