@@ -9,7 +9,7 @@ weight: 1
 
 Hi I am **{{ site.author.name }}** :wave:,<br>
 
-{% include elements/button.html link="https://linked.com/nialltmcgowan" text="View my LinkedIn" style="primary" size="sm" %}
+{% include elements/button.html link="https://linkedin.com/nialltmcgowan" text="View my LinkedIn" style="primary" size="sm" %}
 
 I'm an **Information Security Professional** and **BSI ISO27001 Lead Auditor**.
 
