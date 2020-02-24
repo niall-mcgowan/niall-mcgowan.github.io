@@ -9,7 +9,7 @@ weight: 3
 
 Review my credentials below :point_down:
 
-## **Certifications **
+## **Certifications**
 
 <div class="row">
 {% include about/certifications.html %}
