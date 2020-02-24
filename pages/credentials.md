@@ -12,7 +12,7 @@ Review my credentials below :point_down:
 ## **Certifications**
 
 <div class="row">
-{% include about/certifications.html %}
+{% include about/certs.html %}
 </div>
 
 ## **Qualifications**
