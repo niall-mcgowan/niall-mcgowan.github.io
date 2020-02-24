@@ -1,7 +1,7 @@
 - title: Phishing Simulation Project Manager
   from: Jun 2017
   to: Oct 2017
-  description: |
+  description: |+
     Bob's Business Ltd, Barnsley UK
     • Head of the technical department working with junior staff members.
     • Creating bespoke simulated phishing campaigns.
@@ -14,5 +14,3 @@
   from: Dec 2012
   to: Aug 2016
   description: '{% include skills/heaton_green.html %}'
-
-
