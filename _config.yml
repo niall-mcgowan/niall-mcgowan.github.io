@@ -1,7 +1,7 @@
 ### Site Settings ###
 title               : Niall McGowan
 description         : >-
-                      **consultant / project manager / engineer**
+                      <b>security consultant / engineer / project manager</b> </ br>
 
                       I mess with things to make them more secure :closed_lock_with_key: 
 baseurl             : "/website"                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
