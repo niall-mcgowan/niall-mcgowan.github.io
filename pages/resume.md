@@ -14,7 +14,3 @@ Review my resume, credentials and certifications below :point_down:
 <div class="row">
 {% include about/timeline.html %}
 </div>
-
-<div class="row">
-{% include about/education.html %}
-</div>
