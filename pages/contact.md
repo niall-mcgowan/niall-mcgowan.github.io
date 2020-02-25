@@ -6,8 +6,6 @@ weight: 4
 ---
 
 
-
-
 # **How Can I Help?**
 
 Use the form below to contact me :point_down: I'll get back to you asap :thumbs-up:
@@ -16,11 +14,19 @@ Use the form below to contact me :point_down: I'll get back to you asap :thumbs-
   action="https://formspree.io/xgeykwww"
   method="POST"
 >
+  <label>Full Name:</label>
+  <input type="text" name="fname" />
+
   <label>Email:</label>
   <input type="email" name="email" />
+
+  <label>Subject:</label>
+  <input type="text" name="subject" />
+
   <label>Message:</label>
   <input type="text" name="message" />
-  <button id="my-form-button">Submit</button>
+
+  <button id="my-form-button">Submit</button>   
   <p id="my-form-status"></p>
 </form>
 
