@@ -7,15 +7,13 @@ weight: 1
 
 # **About Me**
 
-Hi I am **{{ site.author.name }}** :wave:,<br>
+Hi I am **{{ site.author.name }}** :wave:<br>
 
-{% include elements/button.html link="https://linkedin.com/nialltmcgowan" text="View my LinkedIn" style="primary" size="sm" %}
+I'm an **Information Security Professional** and **BSI ISO27001 Lead Auditor**. 
 
-I'm an **Information Security Professional** and **BSI ISO27001 Lead Auditor**. I am passionate about security.
+I am passionate about security.
 
-![Showing skills](/assets/skills.gif "Experience")
-
-
+![Showing skills](/website/assets/skills.gif "Experience")
 
 With an eclectic range of previous experience I have recently focused on holistic evaluations of security baselines in IaaS, PaaS and SaaS cloud environments to define and adapt policy and automate checks and remediation. 
 
@@ -25,8 +23,13 @@ Organisations I have previously worked with include MoneySupermarket, Martin Bak
 
 # **What I Specialise In**
 
-| Cloud Computing Security                           	| Information Security Architecture                 	|
-| IT Governance and Enterprise Risk Management       	| Incident Response and Automation                  	|
-| Data Protection and GDPR                           	| Penetration Testing and Vulnerability Assessments 	|
-| Network Security and Management                    	| Identity and Access Management                    	|
-| Business Continuity and Disaster Recovery Planning 	| Social Engineering and User Awareness             	|
+| :cloud: **Cloud Computing Security** - Ensuring cloud security through secure configuration, perpetual compliance checks and utilising cloud access security broker software.                           	|
+| Incident Response and Automation                  	|
+| IT Governance and Enterprise Risk Management       	|
+| Data Protection and GDPR                           	|
+| Network Security and Management                    	|
+| Business Continuity and Disaster Recovery Planning 	|
+| Information Security Architecture                 	|
+| Penetration Testing and Vulnerability Assessments 	|
+| Identity and Access Management                    	|
+| Social Engineering and User Awareness             	|
