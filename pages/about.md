@@ -7,7 +7,7 @@ weight: 1
 
 # **About Me**
 
-Hi I am **{{ site.author.name }}** :wave:<br> I am passionate about security.
+Hi I am **{{ site.author.name }}** :wave:  I am passionate about security.
 
 I'm an **Information Security Professional** and **BSI ISO27001 Lead Auditor**. 
 
@@ -21,9 +21,9 @@ Organisations I have previously worked with include MoneySupermarket, Martin Bak
 
 # **What I Specialise In**
 
-| :cloud: **Cloud Computing Security** - Ensuring cloud security through secure configuration, perpetual compliance checks and utilising cloud access security broker software.                           	|
-| :exclamation: **Incident Response and Automation** -                   	|
+| :cloud: **Cloud Computing Security** < /br> Ensuring cloud security through secure configuration, perpetual compliance checks and utilising cloud access security broker software.                           	|
+| :exclamation: **Incident Response and Automation** - Using a threat informed defense methodology to ensure as many potential incidents are considered and remediated automatically.                   	|
 | :clipboard: **IT Governance and Enterprise Risk Management** - Using the information gathered from assessments to adapt security policy within an organisation, setting strategy to facilitate the growth of the organisation’s security culture.       	|
 | :fish: **User Awareness and Phishing Simulations** - I create informative and holistic user awareness campaigns by simplifying policy and leveraging the results of simulated phishing attacks to change employee behaviour.             	|
 | :bug:  **Vulnerability and Risk Assessments** - Conducting vulnerability and risk assessments as well as audits and interviews to determine organisations current security baselines.                   	|
-| :flag: **Project Management** - Proven track record managing large scale projects, involving thousands of staff members.                    	|
+| :triangular_flag_on_post: **Project Management** - Proven track record managing large scale projects, involving thousands of staff members.                    	|
