@@ -21,7 +21,8 @@ Organisations I have previously worked with include MoneySupermarket, Martin Bak
 
 # **What I Specialise In**
 
-| :cloud: **Cloud Computing Security** < /br> Ensuring cloud security through secure configuration, perpetual compliance checks and utilising cloud access security broker software.                           	|
+| :cloud: **Cloud Computing Security**
+Ensuring cloud security through secure configuration, perpetual compliance checks and utilising cloud access security broker software.                           	|
 | :exclamation: **Incident Response and Automation** - Using a threat informed defense methodology to ensure as many potential incidents are considered and remediated automatically.                   	|
 | :clipboard: **IT Governance and Enterprise Risk Management** - Using the information gathered from assessments to adapt security policy within an organisation, setting strategy to facilitate the growth of the organisation’s security culture.       	|
 | :fish: **User Awareness and Phishing Simulations** - I create informative and holistic user awareness campaigns by simplifying policy and leveraging the results of simulated phishing attacks to change employee behaviour.             	|
