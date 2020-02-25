@@ -13,7 +13,7 @@ Hi I am **{{ site.author.name }}** :wave:,<br>
 
 I'm an **Information Security Professional** and **BSI ISO27001 Lead Auditor**. I am passionate about security.
 
-![Showing skills](https://website-assetsnm.s3.eu-west-2.amazonaws.com/screenshot.gif "Experience")
+![Showing skills](/assets/skills.gif "Experience")
 
 
 
