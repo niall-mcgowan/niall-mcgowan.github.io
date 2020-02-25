@@ -10,10 +10,8 @@ weight: 4
 
 Use the form below to contact me :point_down: I'll get back to you asap :thumbs-up:
 
-<form id="my-form"
-  action="https://formspree.io/xgeykwww"
-  method="POST"
->
+<form class="form-control" id="my-form" action="https://formspree.io/xgeykwww" method="POST">
+
   <label>Full Name:</label>
   <input type="text" name="fname" />
 
