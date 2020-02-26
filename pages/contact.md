@@ -10,22 +10,15 @@ weight: 4
 
 Use the form below to contact me :point_down: I'll get back to you asap :thumbs-up:
 
-<form class="form-control" id="my-form" action="https://formspree.io/xgeykwww" method="POST">
 
-  <label>Full Name:</label>
-  <input type="text" name="fname" />
+<form id="my-form" class="form-control" action="https://formspree.io/xgeykwww" method="POST">
+		
+		  <input id="name" type="text" placeholder="Name">
+		  <input id="email" type="text" placeholder="E-mail">
+		  <textarea id="message" type="text" placeholder="Message"></textarea>
 
-  <label>Email:</label>
-  <input type="email" name="email" />
-
-  <label>Subject:</label>
-  <input type="text" name="subject" />
-
-  <label>Message:</label>
-  <input type="text" name="message" />
-
-  <button id="my-form-button">Submit</button>   
-  <p id="my-form-status"></p>
+  <input id="submit" type="submit" value="Submit">
+  
 </form>
 
 <!-- Place this script at the end of the body tag -->
