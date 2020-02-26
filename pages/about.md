@@ -23,11 +23,8 @@ I'm an **Information Security Professional** and **BSI ISO27001 Lead Auditor**.
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
-    <p>&nbsp;</p>
   </div>
-
 </div>
-
 With an eclectic range of previous experience I have recently focused on holistic evaluations of security baselines in IaaS, PaaS and SaaS cloud environments to define and adapt policy and automate checks and remediation. 
 
 Specialising in security architecture through governance, risk and compliance (GRC), systems/network benchmarking and hardening, vulnerability assessments, and user awareness. 
