@@ -1,5 +1,3 @@
----
----
 @import "portfolYOU";
 
 .h1, h1, .h2, h2, .h3, h3 {
@@ -23,9 +21,9 @@
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   }
 
-  .typewriter h1 {
+  .typewriter h3 {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
+    border-right: .15em solid #0099E5; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: .15em; /* Adjust as needed */
