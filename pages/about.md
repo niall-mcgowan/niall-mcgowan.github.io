@@ -9,6 +9,9 @@ weight: 1
 
 Hi I am **{{ site.author.name }}** :wave:  I am passionate about security.
 
+{% include elements/button.html link="mailto:hello@niallmcgowan.com" text="Email Me" %}
+{% include elements/button.html link="https://linkedin.com/nialltmcgowan" text="LinkedIn" %}
+
 I'm an **Information Security Professional** and **BSI ISO27001 Lead Auditor**. 
 
 ![Working with a brew](/website/assets/aboutgif.gif "Working")
