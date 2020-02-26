@@ -7,70 +7,133 @@
     text-decoration-color: #0099E5;
   }
 
-
-
-
-
-
-
-  $bs: 0 2px 4px rgba(0, 0, 0, .10), 0 4px 6px rgba(0, 0, 0, .12);
-  $trans: all 0.3s ease;
-  
-  .form__container {
-    background: #fff;
-    margin: 0 auto;
-    margin-top: 16px;
-    padding: 32px;
-    box-shadow: $bs;
-    border-radius: 4px;
+  input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+    color: #0099E5;
   }
   
-
-  .gutter {
-    height: 32px;
+  /* placeholders not clicked */
+  input::placeholder, textarea::placeholder {
+    color: black;
   }
   
-  .footer__social {	
-    height: 68px;
-    text-align: center;
-    opacity: 1;
-    transition: $trans;
-    line-height: 70px;
+  input:focus::placeholder, textarea::focus:placeholder {
+    color: #0099E5;
+  }
+  
+  input::-ms-placeholder, textarea::-ms-placeholder {
+    color: white;
+  }
+  
+  
+  input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
+    color: #0099E5;
+  }
+  
+  /* on hover placeholder */
+  input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
+    color: yellow;
+  }
+  
+  input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-input-placeholder {
+    color: #0099E5;
+  }
+  
+  input:hover::-moz-placeholder, textarea:hover::-moz-placeholder {
+    color: #0099E5;
+  }
+  
+  input:hover:focus::-moz-placeholder, textarea:hover:focus::-moz-placeholder {
+    color: #0099E5;
+  }
+  
+  input:hover::placeholder, textarea:hover::placeholder {
+    color: #0099E5;
+  }
+  
+  /* when textarea is clicked */
+  input:hover:focus::placeholder, textarea:hover:focus::placeholder {
+    color: white;
+  }
+  
+  /* on hover over textarea */
+  input:hover::placeholder, textarea:hover::placeholder {
+    color: white;
+  }
+  
+  input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
+    color: #0099E5;
+  }
+  
+  body {
+    background: white;
+  }
+
+  #form {
+    position: relative;
+    width: 500px;
+    margin: 50px auto 100px auto;
+  }
+  
+  input {
+    width: 470px;
+    height: 50px;
+    padding: 0px 15px 0px 15px;
     
-    .fa {
-      vertical-align: middle;
-      transition: $trans;
-    }
+    background: transparent;
+    outline: none;
     
-    @each $class,$color in $colors {
+    border: solid 1px #0099E5;
+    border-bottom: none;
+    
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+  }
+  
+  input:hover {
+    background: #0099E5;
+    color: white;
+  }
+  
+  textarea {
+    width: 470px;
+    max-width: 470px;
+    height: 110px;
+    max-height: 110px;
+    padding: 15px;
+    
+    background: transparent;
+    outline: none;
       
-      &.#{$class} {
-        
-        &:hover {
-          background-color: #{$color};
-        }
-        
-        .fa {
-          color: #{$color};
-        }
-      }
-    }
+    border: solid 1px #0099E5;
     
-    &:hover {
-      
-      .fa {
-        color: #fff;
-      }
-    }
-    
-    &:focus {
-      opacity: .85;
-    }
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
   }
   
-  @media(max-width:767px){
-    .form__container {
-      margin: 0;
-      padding: 16px;
-    }
+  textarea:hover {
+    background: #0099E5;
+    color: white;
+  }
+  
+  #submit {
+    width: 502px;
+    
+    padding: 0;
+    margin: -5px 0px 0px 0px;
+    
+    color: black;
+    
+    outline:none;
+    cursor: pointer;
+    
+    border: solid 1px #0099E5;
+    border-top: none;
+  }
+  
+  #submit:hover {
+    color: white;
   }
