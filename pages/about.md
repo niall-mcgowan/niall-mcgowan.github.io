@@ -11,7 +11,9 @@ Hi I am **{{ site.author.name }}** :wave:  I am passionate about security.
 
 I'm an **Information Security Professional** and **BSI ISO27001 Lead Auditor**. 
 
-![Showing skills](/website/assets/skills.gif "Experience")
+<div class="typewriter">
+  <h1>Cloud Security / Network Security and Management / Business Continuity and Disaster Recovery Planning / Physical Security / Data Protection and GDPR / Access Control Systems / More Below!</h1>
+</div>
 
 With an eclectic range of previous experience I have recently focused on holistic evaluations of security baselines in IaaS, PaaS and SaaS cloud environments to define and adapt policy and automate checks and remediation. 
 
