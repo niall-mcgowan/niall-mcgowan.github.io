@@ -21,7 +21,7 @@
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   }
 
-  .typewriter h3 {
+  .typewriter p {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid #0099E5; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
