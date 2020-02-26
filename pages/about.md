@@ -11,8 +11,21 @@ Hi I am **{{ site.author.name }}** :wave:  I am passionate about security.
 
 I'm an **Information Security Professional** and **BSI ISO27001 Lead Auditor**. 
 
-<div class="typewriter">
-  <p>Cloud Security / Network Security and Management / Business Continuity and Disaster Recovery Planning / Physical Security / Data Protection and GDPR / Access Control Systems / More Below!</p>
+<div class="container">
+<!-- container div is required to set absolute positions within it, so that .typing and .hiders exactly overlap -->
+
+  <p class="typing">
+    Cloud Security / Network Security and Management / Business Continuity and Disaster Recovery Planning / Physical Security / Data Protection and GDPR / Access Control Systems / More Below!
+  </p>
+
+  <div class="hiders">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </div>
+
 </div>
 
 With an eclectic range of previous experience I have recently focused on holistic evaluations of security baselines in IaaS, PaaS and SaaS cloud environments to define and adapt policy and automate checks and remediation. 
