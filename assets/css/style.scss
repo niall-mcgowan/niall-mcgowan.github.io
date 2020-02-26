@@ -12,7 +12,7 @@
 
   
 
-  @keyframes typing {
+@keyframes typing {
     from { width: 100% }
     to { width: 0 }
     
@@ -52,10 +52,4 @@
 }
 .hiders p:nth-child(3) {
   animation-delay: 4s;
-}
-.hiders p:nth-child(4) {
-  animation-delay: 6s;
-}
-.hiders p:nth-child(5) {
-  animation-delay: 8s;
 }
