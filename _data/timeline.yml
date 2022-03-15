@@ -1,6 +1,16 @@
-- title: Security Engineer
-  from: <b>Well Pharmacy</b>, Aug 2019
+- title: Senior Cybersecurity Auditor II (Vice President)
+  from: <b>Bank of New York Mellon</b>, Dec 2020
   to: Present
+  description: 
+
+- title: Cyber Security Operations Engineer
+  from: <b>Evergreen Life</b>, Jun 2020
+  to: Nov 2020
+  description: 
+
+- title: Security Engineer
+  from: <b>Well Pharmacy</b>, Jul 2019
+  to: Jun 2020
   description: • Working with DevOps team to implement security automation and remediation throughout AWS. <br />
                • Ensuring compliance with NHS’s Data Security and Protection Toolkit, CareCERT, CyberEssentials and PCI-DSS. <br />
                • Project lead implementing Microsoft Cloud Application Security (MCAS) solution for MS and AWS. <br />
