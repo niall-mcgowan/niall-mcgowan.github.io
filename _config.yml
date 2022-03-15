@@ -1,12 +1,13 @@
 ### Site Settings ###
 title               : Niall McGowan
 description         : |
-                      <b>security consultant/engineer/project manager</b> <br />
+                      <b>security auditor/consultant/engineer/project manager</b> <br />
                       
                       I mess with things to make them more secure :closed_lock_with_key: 
-baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
+baseurl             : "/portfolYOU"                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : YoussefRaafatNasry/portfolYOU     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : YoussefRaafatNasry/portfolYOU
+open_new_tab        : true                             # Opens external URLs in new tab (works for posts, projects and navbar only)
 
 
 ### Plugins ###
@@ -19,13 +20,12 @@ nav_exclude:                                            # The following paths ar
   - pages/tags.html
   - pages/404.html
   - pages/index.md
-  - documentation/partials/**                           # For Documentation Only
 
 
 ### Author Info ###
 author:
   name              : Niall McGowan
-  image             : https://website-assetsnm.s3.eu-west-2.amazonaws.com/profilepicture.png
+  image             : ./assets/photo.png
 # behance           : your_username
 # dribbble          : your_username
   email             : hello@niallmcgowan.com
@@ -33,6 +33,7 @@ author:
 # github            : your_username
 # gitlab            : your_username
 # instagram         : your_username
+# kaggle            : your_username
   linkedin          : nialltmcgowan
 # medium            : your_username
 # soundcloud        : your_username
@@ -43,6 +44,7 @@ author:
 # twitter           : your_username
 # vimeo             : your_username
 # youtube           : your_channel_name
+# keybase           : your_username
 
 
 ### Posts ###
@@ -54,8 +56,17 @@ collections:
   projects:
     output: true
     permalink: /projects/:name
-  elements:                                             # For Documentation Only
-    output: true                                        # For Documentation Only
+
+### Disqus ###
+disqus:
+  shortname: your-short-name-disqus                     # Your website Shortname on disqus
+
+
+### Analytics ###
+analytics:
+  enabled: false                                        # Set true to enable analytics
+  google:
+    tracking_id: your-google-tracking-id
 
 
 ### Defaults for collections ###
@@ -70,6 +81,11 @@ defaults:
       type: "elements"                                  # For Documentation Only
     values:                                             # For Documentation Only
       layout: "element"                                 # For Documentation Only
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: false                                   # Set to true to enable disqus comments
 
 
 ### Exclude from processing ###
