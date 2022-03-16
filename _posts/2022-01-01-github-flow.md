@@ -55,8 +55,8 @@ The significance of vulnerabilities often come down to the question “who uses 
 
 Security firm CheckPoint released statistics on the impact of Log4J. Their data showed nearly 50% of all corporate networks and 53% of banking and finance enterprises worldwide used applications vulnerable to Log4Shell:
 
-{% include elements/figure.html image=".assets/log4shell-impactindustry.png" caption="Credit [Checkpoint.com](www.checkpoint.com)." %}
-{% include elements/figure.html image=".assets/log4shell-impactregion.png" caption="Credit [Checkpoint.com](www.checkpoint.com)." %}
+{% include elements/figure.html image="./assets/log4shell-impactindustry.png" caption="Credit [Checkpoint.com](www.checkpoint.com)." %}
+{% include elements/figure.html image="./assets/log4shell-impactregion.png" caption="Credit [Checkpoint.com](www.checkpoint.com)." %}
 
 ### Java (and log4J) is used everywhere
 
@@ -82,7 +82,7 @@ In the case of Log4Shell, attackers use a feature of Java called the “Java Nam
 
 The string of code used to invoke JNDI is the aforementioned malicious single string of text. As previously stated, there are many ways to push the malicious JNDI code string to servers vulnerable to Log4Shell. The most common method can be simplified into five stages:
 
-{% include elements/figure.html image=".assets/log4shellattackflow.png" caption="Attack Flow." %}
+{% include elements/figure.html image="./assets/log4shellattackflow.png" caption="Attack Flow." %}
 
 Stage 1 – The attacker inserts the JNDI lookup in a website header field that is likely to be logged:
 ```python
@@ -125,7 +125,7 @@ At this point, it is up to the attackers what happens next. So far the vulnerabi
 
 There are several means of defending against Log4Shell. Refer to the attack flow below:
 
-{% include elements/figure.html image=".assets/log4shelldefenseflow.png" caption="Defense Flow" %}
+{% include elements/figure.html image="./assets/log4shelldefenseflow.png" caption="Defense Flow" %}
 
 At stage 1 – To prevent against the insertion of the JNDI lookup in the header field, Web Application Firewalls rules can be setup to prevent succession posting of the web header. However, attackers have quickly developed means to [get around this defence](https://github.com/Puliczek/CVE-2021-44228-PoC-log4j-bypass-words).
 
@@ -160,7 +160,7 @@ It is important to remember that open-source software is often created and maint
 
 Log4J is integral to applications built by some of the world’s most profitable organisations and nations, yet it was maintained by three developers working for free (at the time of Log4Shell’s discovery).
 
-{% include elements/figure.html image=".assets/log4shelltwitter.png" caption="Source: Twitter.com" %}
+{% include elements/figure.html image="./assets/log4shelltwitter.png" caption="Source: Twitter.com" %}
 
 Open-source software is third party risk, but organisations do not often see it as such. Tools like Log4J are taken for granted and funding for these projects is often non-existent. 
 
