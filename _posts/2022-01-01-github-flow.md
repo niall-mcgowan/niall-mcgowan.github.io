@@ -1,5 +1,5 @@
 ---
-title: Cyber Pandemic: Log4Shell
+title: Understanding the Cyber Pandemic - Log4Shell
 tags: [Log4J, Log4Shell, Vulnerabilities]
 style: fill
 color: primary
