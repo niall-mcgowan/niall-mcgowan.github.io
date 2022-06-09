@@ -8,6 +8,8 @@ description: How a single Java tool brought the internet and modern tech infrast
 
 Source: [Numerous - see links in article]
 
+<b>How a single Java tool brought the internet and modern tech infrastructure to its knees</b>
+
 The critical Log4J vulnerability dubbed “Log4shell” is an excellent example of how a single point of failure can completely change the cyber threat landscape and drastically increase cyber risk to organisations across the globe. Described by many as a “cyber pandemic”, it is one of the most significant security incidents in recent memory, with security firm Tenable describing it as "the single biggest, most critical vulnerability of the last decade".
 
 ## What is Log4J?  
