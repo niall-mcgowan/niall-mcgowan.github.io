@@ -1,0 +1,949 @@
+<!doctype html>
+<html lang="en">
+
+<!--
+
+ ______        __                                                                             __      __        __                      __                     _____            __                                     
+|      \      |  \                                                                           |  \    |  \      |  \                    |  \                   |     \          |  \                                    
+ \$$$$$$      | $$   __  _______    ______   __   __   __        __    __   ______   __    __| $$____| $$      | $$  ______    ______  | $$   __               \$$$$$  ______  | $$____   _______   _______   __    __ 
+  | $$        | $$  /  \|       \  /      \ |  \ |  \ |  \      |  \  |  \ /      \ |  \  |  \\$/      $$      | $$ /      \  /      \ | $$  /  \                | $$ /      \ | $$    \ |       \ |       \ |  \  |  \
+  | $$        | $$_/  $$| $$$$$$$\|  $$$$$$\| $$ | $$ | $$      | $$  | $$|  $$$$$$\| $$  | $$ |  $$$$$$$      | $$|  $$$$$$\|  $$$$$$\| $$_/  $$           __   | $$|  $$$$$$\| $$$$$$$\| $$$$$$$\| $$$$$$$\| $$  | $$
+  | $$        | $$   $$ | $$  | $$| $$    $$| $$ | $$ | $$      | $$  | $$| $$  | $$| $$  | $$ | $$  | $$      | $$| $$  | $$| $$  | $$| $$   $$           |  \  | $$| $$  | $$| $$  | $$| $$  | $$| $$  | $$| $$  | $$
+ _| $$_       | $$$$$$\ | $$  | $$| $$$$$$$$| $$_/ $$_/ $$      | $$__/ $$| $$__/ $$| $$__/ $$ | $$__| $$      | $$| $$__/ $$| $$__/ $$| $$$$$$\  __       | $$__| $$| $$__/ $$| $$  | $$| $$  | $$| $$  | $$| $$__/ $$
+|   $$ \      | $$  \$$\| $$  | $$ \$$     \ \$$   $$   $$       \$$    $$ \$$    $$ \$$    $$  \$$    $$      | $$ \$$    $$ \$$    $$| $$  \$$\|  \       \$$    $$ \$$    $$| $$  | $$| $$  | $$| $$  | $$ \$$    $$
+ \$$$$$$       \$$   \$$ \$$   \$$  \$$$$$$$  \$$$$$\$$$$        _\$$$$$$$  \$$$$$$   \$$$$$$    \$$$$$$$       \$$  \$$$$$$   \$$$$$$  \$$   \$$| $$        \$$$$$$   \$$$$$$  \$$   \$$ \$$   \$$ \$$   \$$ _\$$$$$$$
+                                                                |  \__| $$                                                                        \$                                                         |  \__| $$
+                                                                 \$$    $$                                                                                                                                    \$$    $$
+                                                                  \$$$$$$                                                                                                                                      \$$$$$$ 
+
+
+⠀⠀⠀⠀⠀⠀⢀⣠⠤⠖⠒⠒⠉⠉⠉⠉⠉⠉⠒⠒⠲⠦⣄⡀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢀⣴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢦⡀⠀⠀⠀⠀
+⠀⠀⠀⠀⢸⢄⡑⠄⣠⠤⠤⢤⣀⠀⠀⠀⠀⣀⡤⠤⠤⣄⡠⠊⡠⡇⠀⠀⠀⠀
+⢰⡀⠀⠀⠸⡗⠌⡟⠁⠀⠀⠀⠀⠙⠆⡠⠊⠀⠀⠀⠀⠈⢻⠡⢲⠇⠀⠀⢀⡆
+⣼⠙⢦⡀⠀⢷⠐⢳⡀⠀⠀⠐⢄⠀⠀⠀⠀⡠⠀⠀⠀⢀⡞⠒⡼⠀⢀⡴⠋⢧
+⡇⠀⢃⠙⢦⣸⣄⣴⠟⠀⠀⠀⠀⠑⠀⠀⠊⠀⠀⠀⠀⠛⣦⣀⡇⡴⠋⡐⠀⢸
+⢷⠈⠉⢆⠀⠹⡟⠈⣶⡤⣄⡀⠀⠀⠆⠰⠀⠀⢀⣠⢤⣶⠉⢻⠏⠀⡰⠉⠀⡼
+⠸⡄⠀⠀⠳⣤⡇⠀⠹⢷⣌⣉⣽⡶⠆⠰⢶⣯⣉⣡⡾⠏⠀⢸⣤⠞⠁⠀⢠⡇
+⠀⠙⢤⣀⣀⣢⣇⠀⠀⠀⠀⠈⠉⡘⠀⠀⢃⠉⠉⠀⠀⠀⠀⢸⣄⣀⣀⡤⠏⠀
+⠀⠀⠀⠈⠉⠙⢻⡐⠉⡍⠀⠀⠈⠄⠀⠀⠠⢁⠀⠀⢩⠉⢂⡿⠋⠋⠁⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠈⠳⣄⠘⣄⠀⠰⠒⠠⠄⠒⠎⠀⣠⠃⢠⠞⠁⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠘⢦⢧⠑⡦⢤⣀⣀⡤⢴⠊⡹⡴⠃⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢧⠑⠇⠐⠀⠀⠂⠘⠊⡼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢳⡀⠀⠀⠀⠀⢀⡼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢦⣄⣠⠴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+-->
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CoS Player Questionnaire (Flaws • Bonds • Motivation)</title>
+  <style>
+    :root{
+      --bg:#0c0d10;
+      --panel:#14161b;
+      --panel2:#101218;
+      --text:#e7e7ea;
+      --muted:#a8abb6;
+      --line:#262a35;
+      --accent:#b57cff;
+      --bad:#ff6b6b;
+      --good:#46d39a;
+      --warn:#ffcf66;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --r:14px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:radial-gradient(1200px 800px at 15% 15%, rgba(181,124,255,.08), transparent 55%),
+                 radial-gradient(900px 700px at 85% 30%, rgba(70,211,154,.06), transparent 50%),
+                 var(--bg);
+      color:var(--text);
+      font-family:var(--sans);
+      line-height:1.35;
+    }
+    header{
+      position:sticky; top:0; z-index:20;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(to bottom, rgba(12,13,16,.92), rgba(12,13,16,.70));
+      border-bottom:1px solid rgba(38,42,53,.8);
+    }
+    .wrap{max-width:1100px;margin:0 auto;padding:14px 16px;}
+    .topbar{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;}
+    h1{margin:0;font-size:18px;letter-spacing:.2px;}
+    .pill{
+      font-size:12px;color:var(--muted);
+      border:1px solid rgba(38,42,53,.9);
+      background:rgba(20,22,27,.7);
+      padding:6px 10px;border-radius:999px;
+    }
+    .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:12px;padding:12px 0 22px;}
+    @media (max-width: 980px){.grid{grid-template-columns:1fr;}}
+    .card{
+      background:linear-gradient(180deg, rgba(20,22,27,.92), rgba(16,18,24,.92));
+      border:1px solid rgba(38,42,53,.85);
+      border-radius:var(--r);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .card h2{
+      margin:0;font-size:13px;letter-spacing:.2px;
+      padding:12px 12px 10px;border-bottom:1px solid rgba(38,42,53,.7);
+      display:flex;align-items:center;justify-content:space-between;gap:10px;
+    }
+    .card h2 .hint{font-size:12px;color:var(--muted);font-weight:400}
+    .content{padding:12px;}
+    .row{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-start;}
+    .col{flex:1 1 260px;min-width:260px;}
+    label{display:block;font-size:12px;color:var(--muted);margin:6px 0;}
+    input,select,textarea{
+      width:100%;
+      background:rgba(12,13,16,.55);
+      border:1px solid rgba(38,42,53,.75);
+      color:var(--text);
+      border-radius:12px;
+      padding:10px 10px;
+      font-size:12px;
+      outline:none;
+    }
+    textarea{min-height:88px;resize:vertical;}
+    .small{min-height:60px}
+    .mono{font-family:var(--mono)}
+    .hr{height:1px;background:rgba(38,42,53,.7);margin:10px 0;}
+    .btnrow{display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+    button{
+      background:rgba(181,124,255,.12);
+      border:1px solid rgba(181,124,255,.35);
+      color:var(--text);
+      border-radius:10px;
+      padding:8px 10px;
+      font-size:12px;
+      cursor:pointer;
+    }
+    button:hover{background:rgba(181,124,255,.18)}
+    button.secondary{background:rgba(168,171,182,.10);border:1px solid rgba(168,171,182,.25);}
+    button.good{background:rgba(70,211,154,.10);border:1px solid rgba(70,211,154,.35);}
+    button.danger{background:rgba(255,107,107,.12);border:1px solid rgba(255,107,107,.35);}
+    .mutedBox{
+      background:rgba(12,13,16,.45);
+      border:1px solid rgba(38,42,53,.7);
+      border-radius:12px;
+      padding:10px;
+      color:var(--muted);
+      font-size:12px;
+    }
+    .tag{
+      display:inline-block;
+      font-family:var(--mono);
+      font-size:11px;
+      color:var(--muted);
+      padding:2px 8px;
+      border:1px solid rgba(38,42,53,.8);
+      border-radius:999px;
+      background:rgba(12,13,16,.45);
+      margin-right:6px;margin-bottom:6px;
+    }
+    .out{
+      white-space:pre-wrap;
+      font-family:var(--mono);
+      font-size:12px;
+      line-height:1.35;
+      color:#f0f0f4;
+      background:rgba(8,9,12,.75);
+      border:1px solid rgba(38,42,53,.85);
+      border-radius:12px;
+      padding:12px;
+      min-height:240px;
+    }
+    details{
+      border:1px solid rgba(38,42,53,.7);
+      border-radius:12px;
+      padding:10px 10px;
+      background:rgba(12,13,16,.35);
+    }
+    summary{cursor:pointer;color:#f1f1f5;font-size:12px;font-weight:600;}
+    .warn{color:var(--warn)}
+    .goodtxt{color:var(--good)}
+    .badtxt{color:var(--bad)}
+  </style>
+</head>
+
+
+
+<body>
+<header>
+  <div class="wrap">
+    <div class="topbar">
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+        <h1>CoS Player Questionnaire</h1>
+        <span class="pill">Fill → Generate text → Send to DM</span>
+      </div>
+      <div class="btnrow">
+        <button class="secondary" id="exportBtn">Export JSON</button>
+        <button class="secondary" id="importBtn">Import JSON</button>
+        <input id="importFile" type="file" accept="application/json" style="display:none" />
+        <button class="danger" id="resetBtn">Reset</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- INTRO / HOW IT WORKS -->
+  <section class="card" style="margin-top:12px;">
+    <h2>
+      What you’re doing here
+      <span class="hint">Read once, then follow stages 1–6 below.</span>
+    </h2>
+    <div class="content">
+      <div class="mutedBox">
+        This form captures the parts of your character that matter most in a gothic-horror campaign:
+        <span class="mono">what you want</span>, <span class="mono">what you fear</span>, and <span class="mono">what you might become under pressure</span>.
+        When you click <span class="mono">Generate</span>, it will output a single body of text you can copy/paste and send to the DM.
+        <div class="hr"></div>
+        <div class="chipline">
+          <span class="tag">Stage 1</span> Identity & basics (name, class, background)
+          <br/><span class="tag">Stage 2</span> Concept + secret + fear/line (what breaks you, what you might do to survive)
+          <br/><span class="tag">Stage 3</span> Flaws (pick 1–2) + how they show up + triggers + what growth looks like
+          <br/><span class="tag">Stage 4</span> Bonds (pick 1–2) + who/what it’s tied to + what you want + what you’d sacrifice
+          <br/><span class="tag">Stage 5</span> Motivation (roll d12 or choose) + why it matters to you
+          <br/><span class="tag">Stage 6</span> Generate → Copy → Send to DM
+        </div>
+        <div class="hr"></div>
+        Guidance: keep choices coherent. One strong flaw and one strong bond beats three vague ones.
+      </div>
+    </div>
+  </section>
+
+  <div class="grid">
+
+    <!-- STAGE 1 + 2 -->
+    <section class="card">
+      <h2>
+        Stage 1–2: Player + Character Info
+        <span class="hint">Identity, concept, and pressure points.</span>
+      </h2>
+      <div class="content">
+        <div class="row">
+          <div class="col">
+            <label>Player name</label>
+            <input id="playerName" placeholder="Your name" />
+          </div>
+          <div class="col">
+            <label>Preferred contact (optional)</label>
+            <input id="contact" placeholder="Discord handle / WhatsApp / email" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label>Character name</label>
+            <input id="charName" placeholder="Character name" />
+          </div>
+          <div class="col">
+            <label>Pronouns (optional)</label>
+            <input id="pronouns" placeholder="e.g., they/them" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label>Race / Lineage</label>
+            <input id="race" placeholder="e.g., Human, Dhampir, Elf..." />
+          </div>
+          <div class="col">
+            <label>Class + level (starting)</label>
+            <input id="clazz" placeholder="e.g., Paladin 3" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label>Background</label>
+            <input id="background" placeholder="e.g., Soldier, Acolyte..." />
+          </div>
+          <div class="col">
+            <label>Role in party (optional)</label>
+            <input id="role" placeholder="e.g., Protector, Face, Scout, Healer" />
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <label>One-paragraph concept (who are you, what do you want, what do you fear?)</label>
+        <textarea id="concept" placeholder="Keep it tight. 6–10 lines max."></textarea>
+
+        <label>Secret (1 thing your character hides from the party)</label>
+        <textarea id="secret" class="small" placeholder="This should be usable. Not trivia."></textarea>
+
+        <div class="row">
+          <div class="col">
+            <label>What would break you? (your character’s fear trigger)</label>
+            <input id="break" placeholder="e.g., being powerless, betrayal, losing a child..." />
+          </div>
+          <div class="col">
+            <label>What would you do to survive? (a line you might cross)</label>
+            <input id="line" placeholder="e.g., bargain with monsters, sacrifice strangers..." />
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- STAGE 6 OUTPUT -->
+    <section class="card">
+      <h2>
+        Stage 6: Generated Text (Send This to DM)
+        <span class="hint">Copy/paste.</span>
+      </h2>
+      <div class="content">
+        <div class="btnrow">
+          <button class="good" id="generateBtn">Generate</button>
+          <button class="secondary" id="copyBtn">Copy to clipboard</button>
+          <button class="secondary" id="downloadBtn">Download .txt</button>
+        </div>
+        <div class="hr"></div>
+        <div id="output" class="out"></div>
+        <div class="hr"></div>
+        <div class="mutedBox">
+          If you select multiple flaws/bonds, keep them coherent. The DM will use these as pressure points and story hooks.
+        </div>
+      </div>
+    </section>
+
+    <!-- STAGE 3 FLAWS -->
+    <section class="card">
+      <h2>
+        Stage 3: Flaws (choose 1–2)
+        <span class="hint">Pick the darkness you want to wrestle with.</span>
+      </h2>
+      <div class="content">
+        <div class="row">
+          <div class="col">
+            <label>Primary flaw (required)</label>
+            <select id="primaryFlaw"></select>
+            <div class="mutedBox" style="margin-top:8px;">
+              <div class="tag">Arc</div>
+              <div id="primaryFlawArc" style="margin-top:6px;"></div>
+            </div>
+          </div>
+          <div class="col">
+            <label>Additional flaws (optional, 0–1 recommended)</label>
+            <select id="extraFlaws" multiple size="10"></select>
+            <div class="mutedBox" style="margin-top:8px;">
+              Hold Ctrl/Cmd to pick multiple. Don’t.
+            </div>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <details>
+          <summary>Flaw specifics (turn selection into usable pressure)</summary>
+          <div class="hr"></div>
+
+          <label>How does your flaw show up under stress? (behaviour)</label>
+          <textarea id="flawBehaviour" class="small" placeholder="e.g., I get controlling; I lash out; I freeze; I self-medicate..."></textarea>
+
+          <label>Trigger situations (what sets it off?)</label>
+          <textarea id="flawTriggers" class="small" placeholder="e.g., being ignored; losing control; being accused; helplessness..."></textarea>
+
+          <label>What would growth look like? (small, concrete)</label>
+          <textarea id="flawGrowth" class="small" placeholder="e.g., asking for help; choosing mercy; tolerating uncertainty..."></textarea>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- STAGE 4 BONDS -->
+    <section class="card">
+      <h2>
+        Stage 4: Bonds (choose 1–2)
+        <span class="hint">Your past is a handle for the story.</span>
+      </h2>
+      <div class="content">
+        <div class="row">
+          <div class="col">
+            <label>Primary bond (required)</label>
+            <select id="primaryBond"></select>
+            <div class="mutedBox" style="margin-top:8px;">
+              <div class="tag">History</div>
+              <div id="primaryBondText" style="margin-top:6px;"></div>
+            </div>
+          </div>
+          <div class="col">
+            <label>Additional bonds (optional, 0–1 recommended)</label>
+            <select id="extraBonds" multiple size="10"></select>
+            <div class="mutedBox" style="margin-top:8px;">
+              Hold Ctrl/Cmd to pick multiple. Don’t.
+            </div>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <details>
+          <summary>Bond specifics (make it actionable for the DM)</summary>
+          <div class="hr"></div>
+
+          <label>Who is tied to this bond? (name + relationship)</label>
+          <input id="bondPerson" placeholder="e.g., Elira (sister), Father Damas (mentor)..." />
+
+          <label>What do you want from this bond? (closure / revenge / rescue / forgiveness)</label>
+          <input id="bondWant" placeholder="e.g., rescue them; prove them wrong; reconcile..." />
+
+          <label>What would you sacrifice for it?</label>
+          <input id="bondSacrifice" placeholder="e.g., wealth; reputation; strangers; your oath..." />
+        </details>
+
+      </div>
+    </section>
+
+    <!-- STAGE 5 MOTIVATION -->
+    <section class="card">
+      <h2>
+        Stage 5: Motivation (d12)
+        <span class="hint">Roll or choose. DM uses this to hook you.</span>
+      </h2>
+      <div class="content">
+        <div class="btnrow">
+          <button class="good" id="rollBtn">Roll d12</button>
+          <button class="secondary" id="useSelectedBtn">Use selected</button>
+          <span class="pill mono" id="rollResult">d12: —</span>
+        </div>
+
+        <div class="hr"></div>
+
+        <label>Motivation (manual selection)</label>
+        <select id="motivation"></select>
+
+        <div class="hr"></div>
+
+        <div class="mutedBox">
+          <div class="tag">Motivation</div> <span class="mono" id="motivationName">—</span>
+        </div>
+
+        <div class="hr"></div>
+
+        <label>Why this motivation? (1–2 sentences)</label>
+        <textarea id="motivationWhy" class="small" placeholder="Make it personal, not abstract."></textarea>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<script>
+  // -----------------------------
+  // Data
+  // -----------------------------
+  const flaws = [
+    ["Addiction","I must learn to conquer the addictions and demons that twist my better nature."],
+    ["Ambition","I must learn to value things other than power and control."],
+    ["Anger","I must learn to let go of my need for revenge."],
+    ["Anxiety","I must learn to be confident in my ability to protect those I love."],
+    ["Apathy","I must learn to hold hope again for the future."],
+    ["Control","I must learn to let go of my need to control those around me."],
+    ["Cynicism","I must learn to have faith in things greater than myself once again."],
+    ["Denial","I must learn to allow myself to grieve for the things I have lost."],
+    ["Doubt","I must learn to become the hero that I've been waiting for."],
+    ["Greed","I must learn to let go of the things I believe I'm owed."],
+    ["Grief","I must learn to move past the loved one that I lost."],
+    ["Guilt","I must learn to let go of my guilt for my failure to protect my loved one."],
+    ["Hesitation","I must learn to conquer my fear of the responsibilities that are expected of me."],
+    ["Hubris","I must learn to accept that others have wisdom that I do not."],
+    ["Impiety","I must learn to find my way back to the grace that I abandoned."],
+    ["Insecurity","I must learn to define myself apart from the expectations of others."],
+    ["Isolation","I must learn to open up and allow others to get close to me."],
+    ["Naivete","I must learn to protect myself from those who would take advantage of me."],
+    ["Narcissism","I must learn to value the lives and experiences of others."],
+    ["Nostalgia","I must learn to leave the past behind and to look to the future instead."],
+    ["Obsession","I must learn to confront the harms that my obsessions have caused to others."],
+    ["Paranoia","I must learn to stop using my fears as an excuse to harm others."],
+    ["Pride","I must learn to ask others for help, rather than shouldering responsibility alone."],
+    ["Recklessness","I must learn to slow down—to stop, wait, and think before I act."],
+    ["Resentment","I must learn to let go of the anger that was born from my grief."],
+    ["Ruthlessness","I must learn the value of mercy and compassion."],
+    ["Sanctimony","I must learn to let go of my need to feel righteous and pure."],
+    ["Shame","I must learn to let go of my guilt for the mistakes that I have made."],
+    ["Spite","I must learn to forgive those who have hurt those I love."],
+    ["Stubbornness","I must learn to overcome my pride and make amends to those I have hurt."],
+    ["Timidity","I must learn to stand up for myself, rather than letting others control me."],
+  ];
+
+  const bonds = [
+    ["Abuse","One of my siblings was cruel to me as a child. I've forgiven them, but never forgotten."],
+    ["Bitterness","Two warring lords brought devastation to my community. I wish I could show them the cost of their war."],
+    ["Boundaries","I was once pursued by an unrelenting suitor. No one should have to endure what I did."],
+    ["Comparison","My older sibling was burdened by great expectations while I was not. I think they resented me for it."],
+    ["Compassion","Someone tried to steal from me once. Rather than hurting them, I helped them instead."],
+    ["Concern","One of my loved ones left home to seek their fortune. I hope they're staying safe."],
+    ["Corruption","Everyone knows that power corrupts. I've seen how firsthand."],
+    ["Determination","My mentor was one of the few people that believed in me. I'm determined to make them proud."],
+    ["Devastation","Someone once destroyed everything I cared about. I can't understand what could drive someone to such evil."],
+    ["Devotion","I love my family above all else. There's nothing I wouldn't do to protect them."],
+    ["Dignity","People should never be used as a means to an end. I should know."],
+    ["Division","My family was split by a bitter feud. I still hope that they'll reconcile someday."],
+    ["Empathy","I'll never forget the sound my parents made when they learned that my sibling had died."],
+    ["Faith","I know what it's like to be persecuted for what you believe in. I never let it shake my beliefs."],
+    ["Forgiveness","Someone once did me great harm. It was only much later that I learned to forgive them."],
+    ["Gratitude","Someone took me in when I had no one else to turn to. I'll always be grateful."],
+    ["Hope","I lost someone close to me to addiction and vice. I still hope that they'll get better someday."],
+    ["Humility","I've seen what happens when people think they have all the answers. It never turns out well."],
+    ["Judgment","I've seen people cause great harm in the name of faith. They laughed when I called it a sin."],
+    ["Loss","One of my loved ones was stolen away from me. I'm still searching for them."],
+    ["Loyalty","Someone close to me fell onto a dark path. I'd do anything to redeem them."],
+    ["Nostalgia","One of my parents loved to create things. Their work always brought me joy."],
+    ["Oppression","A cruel lord once ruled my community. I'll never forgive the harms he caused to my people."],
+    ["Regret","I once knew someone with grand, ambitious plans. I wish they'd heeded my advice."],
+    ["Responsibility","I watched someone allow their family to come to ruin. I'll never do the same."],
+    ["Romance","Love never dies. It might flicker, but I'll never let it burn out."],
+    ["Secrecy","I once promised someone I'd keep their secrets safe. I intend to do so—no matter the cost."],
+  ];
+
+  // Motivations: user-facing only (no item/relic shown anywhere)
+  const motivations = [
+    [1,"Knowledge"],
+    [2,"Redemption"],
+    [3,"Family"],
+    [4,"Inheritance"],
+    [5,"Wealth"],
+    [6,"Healing"],
+    [7,"Duty"],
+    [8,"Power"],
+    [9,"Ambition"],
+    [10,"Faith"],
+    [11,"Harmony"],
+    [12,"Justice"],
+  ];
+
+  // -----------------------------
+  // State + persistence (local only)
+  // -----------------------------
+  const KEY = "cos_player_questionnaire_v2";
+  const $ = (id)=>document.getElementById(id);
+
+  const defaultState = {
+    playerName:"", contact:"",
+    charName:"", pronouns:"",
+    race:"", clazz:"", background:"", role:"",
+    concept:"", secret:"", break:"", line:"",
+    primaryFlaw:"", extraFlaws:[],
+    flawBehaviour:"", flawTriggers:"", flawGrowth:"",
+    primaryBond:"", extraBonds:[],
+    bondPerson:"", bondWant:"", bondSacrifice:"",
+    rollResult:null,
+    motivationId:1,
+    motivationWhy:"",
+    output:""
+  };
+
+  let state = loadState();
+
+  function loadState(){
+    try{
+      const raw = localStorage.getItem(KEY);
+      if(!raw) return structuredClone(defaultState);
+      const p = JSON.parse(raw);
+      return {...structuredClone(defaultState), ...p};
+    }catch(e){
+      return structuredClone(defaultState);
+    }
+  }
+  function saveState(){
+    localStorage.setItem(KEY, JSON.stringify(state));
+  }
+
+  // -----------------------------
+  // Populate selects
+  // -----------------------------
+  function populateSelects(){
+    // flaws
+    const pf = $("primaryFlaw");
+    const ef = $("extraFlaws");
+    pf.innerHTML = "";
+    ef.innerHTML = "";
+
+    const empty = document.createElement("option");
+    empty.value = "";
+    empty.textContent = "— Select a flaw —";
+    pf.appendChild(empty);
+
+    for(const [name] of flaws){
+      const o1 = document.createElement("option");
+      o1.value = name;
+      o1.textContent = name;
+      pf.appendChild(o1);
+
+      const o2 = document.createElement("option");
+      o2.value = name;
+      o2.textContent = name;
+      ef.appendChild(o2);
+    }
+
+    // bonds
+    const pb = $("primaryBond");
+    const eb = $("extraBonds");
+    pb.innerHTML = "";
+    eb.innerHTML = "";
+
+    const emptyB = document.createElement("option");
+    emptyB.value = "";
+    emptyB.textContent = "— Select a bond —";
+    pb.appendChild(emptyB);
+
+    for(const [name] of bonds){
+      const o1 = document.createElement("option");
+      o1.value = name;
+      o1.textContent = name;
+      pb.appendChild(o1);
+
+      const o2 = document.createElement("option");
+      o2.value = name;
+      o2.textContent = name;
+      eb.appendChild(o2);
+    }
+
+    // motivation
+    const mot = $("motivation");
+    mot.innerHTML = "";
+    for(const [d, name] of motivations){
+      const o = document.createElement("option");
+      o.value = String(d);
+      o.textContent = `${d} — ${name}`;
+      mot.appendChild(o);
+    }
+  }
+
+  function setMultiSelect(selectEl, values){
+    const set = new Set(values || []);
+    for(const opt of selectEl.options){
+      opt.selected = set.has(opt.value);
+    }
+  }
+  function getMultiSelectValues(selectEl){
+    return [...selectEl.selectedOptions].map(o=>o.value).filter(Boolean);
+  }
+
+  function flawArc(name){
+    const row = flaws.find(f=>f[0]===name);
+    return row ? row[1] : "";
+  }
+  function bondText(name){
+    const row = bonds.find(b=>b[0]===name);
+    return row ? row[1] : "";
+  }
+  function motivationById(id){
+    const row = motivations.find(m=>m[0]===id);
+    return row ? {id:row[0], name:row[1]} : {id, name:"—"};
+  }
+
+  // -----------------------------
+  // Wiring
+  // -----------------------------
+  function bindInputs(){
+    const ids = [
+      "playerName","contact","charName","pronouns","race","clazz","background","role",
+      "concept","secret","break","line",
+      "flawBehaviour","flawTriggers","flawGrowth",
+      "bondPerson","bondWant","bondSacrifice",
+      "motivationWhy"
+    ];
+    for(const id of ids){
+      $(id).value = state[id] || "";
+      $(id).addEventListener("input", ()=>{
+        state[id] = $(id).value;
+        saveState();
+      });
+    }
+
+    $("primaryFlaw").value = state.primaryFlaw || "";
+    $("primaryFlaw").addEventListener("change", ()=>{
+      state.primaryFlaw = $("primaryFlaw").value;
+      renderPrimaryFlaw();
+      saveState();
+    });
+
+    setMultiSelect($("extraFlaws"), state.extraFlaws);
+    $("extraFlaws").addEventListener("change", ()=>{
+      state.extraFlaws = getMultiSelectValues($("extraFlaws"));
+      saveState();
+    });
+
+    $("primaryBond").value = state.primaryBond || "";
+    $("primaryBond").addEventListener("change", ()=>{
+      state.primaryBond = $("primaryBond").value;
+      renderPrimaryBond();
+      saveState();
+    });
+
+    setMultiSelect($("extraBonds"), state.extraBonds);
+    $("extraBonds").addEventListener("change", ()=>{
+      state.extraBonds = getMultiSelectValues($("extraBonds"));
+      saveState();
+    });
+
+    $("motivation").value = String(state.motivationId || 1);
+    $("motivation").addEventListener("change", ()=>{
+      state.motivationId = Number($("motivation").value);
+      renderMotivation();
+      saveState();
+    });
+  }
+
+  function renderPrimaryFlaw(){
+    const arc = flawArc(state.primaryFlaw);
+    $("primaryFlawArc").textContent = arc || "—";
+  }
+  function renderPrimaryBond(){
+    const txt = bondText(state.primaryBond);
+    $("primaryBondText").textContent = txt || "—";
+  }
+  function renderMotivation(){
+    const m = motivationById(Number(state.motivationId||1));
+    $("motivationName").textContent = m.name;
+  }
+  function renderRoll(){
+    $("rollResult").textContent = state.rollResult ? `d12: ${state.rollResult}` : "d12: —";
+  }
+
+  // -----------------------------
+  // Output generation
+  // -----------------------------
+  function uniqNonEmpty(arr){
+    const out = [];
+    const seen = new Set();
+    for(const x of arr){
+      const v = (x||"").trim();
+      if(!v) continue;
+      if(seen.has(v)) continue;
+      seen.add(v);
+      out.push(v);
+    }
+    return out;
+  }
+
+  function generateText(){
+    const pf = (state.primaryFlaw||"").trim();
+    const pb = (state.primaryBond||"").trim();
+    const m = motivationById(Number(state.motivationId||1));
+
+    const flawsPicked = uniqNonEmpty([pf, ...(state.extraFlaws||[])]).slice(0,3);
+    const bondsPicked = uniqNonEmpty([pb, ...(state.extraBonds||[])]).slice(0,3);
+
+    const flawLines = flawsPicked.map(name=>{
+      const arc = flawArc(name);
+      return `- ${name}: ${arc || ""}`.trim();
+    }).join("\n") || "- (none)";
+
+    const bondLines = bondsPicked.map(name=>{
+      const txt = bondText(name);
+      return `- ${name}: ${txt || ""}`.trim();
+    }).join("\n") || "- (none)";
+
+    const out =
+`PLAYER INFO
+Name: ${state.playerName || "—"}
+Contact: ${state.contact || "—"}
+
+CHARACTER SUMMARY
+Name: ${state.charName || "—"}${state.pronouns ? ` (${state.pronouns})` : ""}
+Race/Lineage: ${state.race || "—"}
+Class/Level: ${state.clazz || "—"}
+Background: ${state.background || "—"}
+Party role: ${state.role || "—"}
+
+CONCEPT (1 paragraph)
+${state.concept || "—"}
+
+SECRET (1 thing you hide)
+${state.secret || "—"}
+
+FEAR + LINE
+What would break you: ${state.break || "—"}
+A line you might cross: ${state.line || "—"}
+
+FLAWS (choose 1–2 recommended)
+${flawLines}
+
+Flaw specifics (behaviour):
+${state.flawBehaviour || "—"}
+
+Triggers:
+${state.flawTriggers || "—"}
+
+Growth (what improvement looks like):
+${state.flawGrowth || "—"}
+
+BONDS (choose 1–2 recommended)
+${bondLines}
+
+Bond specifics:
+Who is tied to it: ${state.bondPerson || "—"}
+What you want from it: ${state.bondWant || "—"}
+What you'd sacrifice for it: ${state.bondSacrifice || "—"}
+
+MOTIVATION (d12)
+d12 result: ${state.rollResult ? state.rollResult : "— (manual selection used)"}
+Motivation: ${m.name}
+
+Why this motivation:
+${state.motivationWhy || "—"}
+`;
+
+    state.output = out;
+    $("output").textContent = out;
+    saveState();
+  }
+
+  // -----------------------------
+  // Export / import / reset
+  // -----------------------------
+  function exportJSON(){
+    const blob = new Blob([JSON.stringify(state, null, 2)], {type:"application/json"});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "cos-player-questionnaire.json";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+  }
+
+  function importJSON(file){
+    const reader = new FileReader();
+    reader.onload = ()=>{
+      try{
+        const imported = JSON.parse(reader.result);
+        state = {...structuredClone(defaultState), ...imported};
+        saveState();
+        hydrateUI();
+      }catch(e){
+        alert("Import failed: invalid JSON.");
+      }
+    };
+    reader.readAsText(file);
+  }
+
+  function resetAll(){
+    if(!confirm("Reset all fields? This cannot be undone.")) return;
+    state = structuredClone(defaultState);
+    saveState();
+    hydrateUI();
+    $("output").textContent = "";
+  }
+
+  // -----------------------------
+  // Actions
+  // -----------------------------
+  function hydrateUI(){
+    const ids = [
+      "playerName","contact","charName","pronouns","race","clazz","background","role",
+      "concept","secret","break","line",
+      "flawBehaviour","flawTriggers","flawGrowth",
+      "bondPerson","bondWant","bondSacrifice",
+      "motivationWhy"
+    ];
+    for(const id of ids){
+      $(id).value = state[id] || "";
+    }
+
+    $("primaryFlaw").value = state.primaryFlaw || "";
+    setMultiSelect($("extraFlaws"), state.extraFlaws);
+
+    $("primaryBond").value = state.primaryBond || "";
+    setMultiSelect($("extraBonds"), state.extraBonds);
+
+    $("motivation").value = String(state.motivationId || 1);
+
+    renderPrimaryFlaw();
+    renderPrimaryBond();
+    renderMotivation();
+    renderRoll();
+
+    $("output").textContent = state.output ? state.output : "";
+  }
+
+  function rollD12(){
+    const r = Math.floor(Math.random()*12) + 1;
+    state.rollResult = r;
+    state.motivationId = r;
+    $("motivation").value = String(r);
+    renderRoll();
+    renderMotivation();
+    saveState();
+  }
+
+  // -----------------------------
+  // Init
+  // -----------------------------
+  function init(){
+    populateSelects();
+    bindInputs();
+    hydrateUI();
+
+    $("rollBtn").addEventListener("click", rollD12);
+
+    $("useSelectedBtn").addEventListener("click", ()=>{
+      state.rollResult = null;
+      renderRoll();
+      saveState();
+    });
+
+    $("generateBtn").addEventListener("click", generateText);
+
+    $("copyBtn").addEventListener("click", async ()=>{
+      if(!(state.output||"").trim()){
+        generateText();
+      }
+      try{
+        await navigator.clipboard.writeText(state.output || $("output").textContent);
+        alert("Copied.");
+      }catch(e){
+        alert("Copy failed. Select the text and copy manually.");
+      }
+    });
+
+    $("downloadBtn").addEventListener("click", ()=>{
+      if(!(state.output||"").trim()){
+        generateText();
+      }
+      const blob = new Blob([state.output], {type:"text/plain"});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `${(state.charName||"character").replace(/[^a-z0-9_-]/gi,"_")}_CoS_Profile.txt`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    });
+
+    $("exportBtn").addEventListener("click", exportJSON);
+
+    $("importBtn").addEventListener("click", ()=>$("importFile").click());
+    $("importFile").addEventListener("change", (evt)=>{
+      const f = evt.target.files?.[0];
+      if(f) importJSON(f);
+      evt.target.value = "";
+    });
+
+    $("resetBtn").addEventListener("click", resetAll);
+
+    renderPrimaryFlaw();
+    renderPrimaryBond();
+    renderMotivation();
+    renderRoll();
+  }
+
+  init();
+</script>
+</body>
+</html>
